@@ -4,7 +4,7 @@ In ColorPicker control, the Selected color’s name can be displayed by binding 
 
 ## MainWindow.xaml:
 
-<Window x:Class="colorpicker.MainWindow"
+    <Window x:Class="colorpicker.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
@@ -24,14 +24,14 @@ In ColorPicker control, the Selected color’s name can be displayed by binding 
                                     Colorprop,Mode=TwoWay}" Canvas.Top="100"  
                                     Canvas.Left="300">
             </syncfusion:ColorPicker>
-
+ 
             <TextBlock Text="{ Binding  Colorprop, Converter={StaticResource  
                               ColorToWordKnownColors}}" HorizontalAlignment="Center" 
                               VerticalAlignment="Center" Canvas.Top="105"  
                               Canvas.Left="450"/>
         </Canvas>
     </Grid>
-</Window>
+    </Window>
 
 ## View Model.cs
     
@@ -60,15 +60,15 @@ In ColorPicker control, the Selected color’s name can be displayed by binding 
 
 ## MainWindow.cs
    
-   public partial class MainWindow : Window
-    {
+      public partial class MainWindow : Window
+      {
         public MainWindow()
         {
             InitializeComponent();
         }
-    }
-    public class ColorHexToStringConverter : IValueConverter
-    {
+      }
+     public class ColorHexToStringConverter : IValueConverter
+     {
         public object Convert(object value, Type targetType, object parameter, 
                                System.Globalization.CultureInfo culture)
         {
@@ -82,7 +82,7 @@ In ColorPicker control, the Selected color’s name can be displayed by binding 
         {
             throw new NotImplementedException();
         }
-    }
+     }
 
 
 
