@@ -1,7 +1,9 @@
-How to bind selected color name of ColorPicker to TextBlock?
+# How to bind selected color name of ColorPicker to TextBlock?
 
-In ColorPicker control, the Selected color’s name can be displayed by binding the color name in TextBlock. The color name from color code can get using SuchColor() method.
-MainWindow.xaml:
+In ColorPicker control, the Selected colorâ€™s name can be displayed by binding the color name in TextBlock. The color name from color code can get using SuchColor() method.
+
+## MainWindow.xaml:
+
 <Window x:Class="colorpicker.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -31,7 +33,8 @@ MainWindow.xaml:
     </Grid>
 </Window>
 
-View Model.cs
+## View Model.cs
+    
     public class ViewModel : INotifyPropertyChanged
     {
         private Color _color = Colors.Green;
@@ -55,8 +58,9 @@ View Model.cs
         }
     }
 
-MainWindow.cs
-    public partial class MainWindow : Window
+## MainWindow.cs
+   
+   public partial class MainWindow : Window
     {
         public MainWindow()
         {
