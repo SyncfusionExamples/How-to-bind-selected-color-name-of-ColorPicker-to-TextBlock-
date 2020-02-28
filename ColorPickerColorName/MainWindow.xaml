@@ -1,0 +1,32 @@
+﻿<Window x:Class="ColorPickerColorName.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ColorPickerColorName"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="450" Width="800">
+    
+        <Window.Resources>
+            <local:ColorHexToStringConverter x:Key="ColorToWordKnownColors">
+            </local:ColorHexToStringConverter>
+        </Window.Resources>
+        <Window.DataContext>
+        <local:ViewModel />
+    </Window.DataContext>
+        <Grid>
+            <Canvas>
+                <syncfusion:ColorPicker HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center" Color="{Binding  
+                                    Colorprop,Mode=TwoWay}" Canvas.Top="100"  
+                                    Canvas.Left="300">
+                </syncfusion:ColorPicker>
+
+                <TextBlock Text="{ Binding  Colorprop, Converter={StaticResource  
+                              ColorToWordKnownColors}}" HorizontalAlignment="Center" 
+                              VerticalAlignment="Center" Canvas.Top="105"  
+                              Canvas.Left="450"/>
+            </Canvas>
+        </Grid>
+</Window>
