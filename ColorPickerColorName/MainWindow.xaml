@@ -18,15 +18,16 @@
         <Grid>
             <Canvas>
                 <syncfusion:ColorPicker HorizontalAlignment="Center" 
-                                    VerticalAlignment="Center" Color="{Binding  
-                                    Colorprop,Mode=TwoWay}" Canvas.Top="100"  
-                                    Canvas.Left="300">
+                                        VerticalAlignment="Center"
+                                        Color="{Binding ColorValue,Mode=TwoWay}"
+                                        Canvas.Top="100"  
+                                        Canvas.Left="300">
                 </syncfusion:ColorPicker>
 
-                <TextBlock Text="{ Binding  Colorprop, Converter={StaticResource  
-                              ColorToWordKnownColors}}" HorizontalAlignment="Center" 
-                              VerticalAlignment="Center" Canvas.Top="105"  
-                              Canvas.Left="450"/>
+                <TextBlock Text="{ Binding  ColorValue, Converter={StaticResource ColorToWordKnownColors}}"
+                           HorizontalAlignment="Center" 
+                           VerticalAlignment="Center" Canvas.Top="105"  
+                           Canvas.Left="450"/>
             </Canvas>
         </Grid>
 </Window>

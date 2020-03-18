@@ -11,7 +11,7 @@ namespace ColorPickerColorName
     class ViewModel :INotifyPropertyChanged
     {
         private Color _color = Colors.Green;
-        public Color Colorprop
+        public Color ColorValue
         {
             get
             {
@@ -20,7 +20,7 @@ namespace ColorPickerColorName
             set
             {
                 _color = value;
-                OnPropertyChanged("Colorprop");
+                OnPropertyChanged("ColorValue");
             }
         }
         public event PropertyChangedEventHandler PropertyChanged;
