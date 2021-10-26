@@ -84,6 +84,6 @@ In ColorPicker control, the Selected color’s name can be displayed by binding 
         }
      }
 
-
+KB article - [How to bind selected color name of ColorPicker to TextBlock?](https://www.syncfusion.com/kb/6589/how-to-get-selected-color-name-of-wpf-colorpicker)
 
 
